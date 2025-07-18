@@ -102,4 +102,9 @@ public class InventoryController : MonoBehaviour
             }
         }
     }
+
+    private void OnDisable()
+    {
+        inventoryData.OnInventoryUpdated -= UpdateInventoryUI;
+    }
 }
